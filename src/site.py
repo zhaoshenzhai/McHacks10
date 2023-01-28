@@ -10,7 +10,7 @@ def print_results():
 @app.route('/route_name')
 def script_output():
     output = execute('./script')
-    return render_template('index.html',output=output)
+    return render_template('./../templates/index.html', output=output)
 
 if __name__ == '__main__':
     app.run()
