@@ -3,11 +3,9 @@ from scrape import *
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def print_results():
     return get_results()
-
 
 @app.route('/route_name')
 def script_output():
@@ -15,4 +13,4 @@ def script_output():
     return render_template('index.html',output=output)
 
 if __name__ == '__main__':
-   app.run()
+    app.run()
