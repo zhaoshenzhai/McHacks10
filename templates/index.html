@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php header("Access-Control-Allow-Origin: null"); ?>
         <meta charset="UTF-8">
         <title>McHacks10</title>
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
@@ -13,9 +14,9 @@
             <p>This is another paragraph.</p>
         </div>
         <py-config>
-          [[fetch]]
-          from = "https://raw.githubusercontent.com/zhaoshenzhai/McHacks10/master/src/"
-          files = ["scrape.py"]
+            [[fetch]]
+            from = "http://0.0.0.0:8000"
+            files = ["scrape.py"]
         </py-config>
     </body>
 </html>
