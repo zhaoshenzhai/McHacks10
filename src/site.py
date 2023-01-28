@@ -1,16 +1,11 @@
 from flask import Flask
-from scrape import *
+from main import *
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
-
-@app.route('/route_name')
-def script_output():
-    output = execute('./script')
-    return render_template('./../templates/index.html', output=output)
+    return results
 
 if __name__ == '__main__':
     app.run()

@@ -1,3 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
+
+def get_links(query, num_results):
+    """
+    :param query: str
+    :param num_results: int
+    :return: links --> used in function get_results
+    """
+    search = query.replace(' ', '+')
+    url = (f"https://www.google.com/search?q={search}&num={num_results}")
+    requests_results = requests.get(url)
+    soup_link = BeautifulSoup(requests_results.content, "html.parser")
+    return soup_link.find_all("a")
+
 def get_results(links):
     """
     :param links: bs4.element.ResultSet
