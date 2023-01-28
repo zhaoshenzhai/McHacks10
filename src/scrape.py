@@ -17,6 +17,7 @@ for link in links:
     if "url?q=" in link_href and not "webcache" in link_href:
         title = link.find_all('h3')
         if len(title) > 0:
+            results[link.get('href').split("?q=")[1].split("&sa=U")[0]] = {title:title[0].getText()}
             print(link.get('href').split("?q=")[1].split("&sa=U")[0])
             print(title[0].getText())
             print("------")
