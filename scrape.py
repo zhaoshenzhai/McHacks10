@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-query = "data science"
+query = input("Query: ")
 search = query.replace(' ', '+')
-results = 10
+results = 20
 url = (f"https://www.google.com/search?q={search}&num={results}")
 
 requests_results = requests.get(url)
