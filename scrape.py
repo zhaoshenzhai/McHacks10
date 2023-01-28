@@ -11,6 +11,7 @@ requests_results = requests.get(url)
 soup_link = BeautifulSoup(requests_results.content, "html.parser")
 links = soup_link.find_all("a")
 
+print()
 for link in links:
     link_href = link.get('href')
     if "url?q=" in link_href and not "webcache" in link_href:
@@ -19,3 +20,4 @@ for link in links:
             print(link.get('href').split("?q=")[1].split("&sa=U")[0])
             print(title[0].getText())
             print("------")
+            print()
