@@ -14,8 +14,8 @@ links = soup_link.find_all("a")
 for link in links:
     link_href = link.get('href')
     if "url?q=" in link_href and not "webcache" in link_href:
-      title = link.find_all('h3')
-      if len(title) > 0:
-          print(link.get('href').split("?q=")[1].split("&sa=U")[0])
-          print(title[0].getText())
-          print("------")
+        title = link.find_all('h3')
+        if len(title) > 0:
+            print(link.get('href').split("?q=")[1].split("&sa=U")[0])
+            print(title[0].getText())
+            print("------")
