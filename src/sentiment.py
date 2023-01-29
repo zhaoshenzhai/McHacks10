@@ -50,8 +50,6 @@ def vibe_per_subreddit(url_list):
 
     count = 0
     for url in url_list:
-        sys.stdout.write("\r" + "Fetching vibes... " + str(count) + "/" + str(len(url_list)))
-        sys.stdout.flush()
         vibe = vibe_per_post(url)[0]
 
         if vibe != None:
@@ -59,6 +57,8 @@ def vibe_per_subreddit(url_list):
             neu_total = neu_total + vibe[1]
             neg_total = neg_total + vibe[2]
         count = count + 1
+        sys.stdout.flush()
+        sys.stdout.write("\r" + "Fetching vibes... " + str(count) + "/" + str(len(url_list)))
 
     print()
     return [pos_total, neu_total, neg_total]

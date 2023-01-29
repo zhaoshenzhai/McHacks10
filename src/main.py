@@ -1,5 +1,3 @@
-import sentiment as sentiment
-
 import scrape
 import sentiment
 import plot
