@@ -1,5 +1,6 @@
 import sys
 import scrape
+
 from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
 
