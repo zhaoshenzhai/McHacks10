@@ -10,7 +10,7 @@ while cont:
     option = input("Welcome!\nPlease choose among the following options:\n"
                    "\t1. Evaluate the “vibe” for one post\n"
                    "\t2. Evaluate the “vibe” of several posts from a subreddit\n"
-                   "\t2. Compare the vibes of two subreddits!\n"
+                   "\t3. Compare the vibes of two subreddits!\n"
                    "\nYour option (1, 2, or 3): ")
     if option == "1":
         url = input("Please enter the url of the post: ")
