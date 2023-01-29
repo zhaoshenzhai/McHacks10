@@ -17,6 +17,8 @@ def get_links(subreddit):
     return links
 
 def get_sentences(url):
+    url = url.replace('www', 'old')
+
     comments = []
     sentences = []
     
