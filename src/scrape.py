@@ -7,7 +7,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH
 def get_links(subreddit):
     links = []
 
-    page = requests.get("https://old.reddit.com/r/" + subreddit + "/", headers = headers)
+    page = requests.get("https://old.reddit.com/r/" + subreddit + "/top/?sort=top&t=all", headers = headers)
     soup = BeautifulSoup(page.text, 'html.parser')
 
     domains = soup.find_all("a", class_ = "comments", href = True)
